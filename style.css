@@ -1,1 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
+body {
+  background: #000;
+  color: #fff;
+}
+
+/* HEADER */
+
+header {
+  position: absolute;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.auth a {
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.register {
+  background: #ff2d7a;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+/* HERO */
+
+.hero {
+  height: 100vh;
+  background: url('img/bg.jpg') center/cover;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+}
+
+.hero-content {
+  max-width: 600px;
+  position: relative;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 900;
+}
+
+h1 span {
+  color: #ff2d7a;
+}
+
+p {
+  margin: 20px 0;
+  color: #ccc;
+}
+
+/* BOTÕES */
+
+.btn {
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.primary {
+  background: #ff2d7a;
+}
+
+.secondary {
+  border: 1px solid #fff;
+}
+
+/* CARD */
+
+.card {
+  position: absolute;
+  right: 60px;
+  bottom: 60px;
+  width: 280px;
+  background: #111;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card-text {
+  padding: 15px;
+}
+
+.card-text span {
+  color: #ff2d7a;
+  font-size: 12px;
+}
