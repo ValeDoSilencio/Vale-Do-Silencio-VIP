@@ -5,10 +5,11 @@
   font-family: 'Poppins', sans-serif;
 
   body {
-  background-image: url("img.fundo.png");
+   background-image: url("img.fundo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body {
