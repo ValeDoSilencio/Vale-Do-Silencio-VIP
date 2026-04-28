@@ -1,120 +1,95 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+/* NAVBAR */
 
-body {
-  background: #000;
-  color: #fff;
-}
-
-/* HEADER */
-
-header {
-  position: absolute;
+.navbar {
+  position: fixed;
+  top: 0;
   width: 100%;
   padding: 20px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
 }
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo .pink {
+  color: #ff2d7a;
+}
+
+/* DIAMANTE */
+
+.diamond {
+  width: 20px;
+  height: 20px;
+  background: #ff2d7a;
+  transform: rotate(45deg);
+  margin-right: 10px;
+  position: relative;
+}
+
+.diamond::after {
+  content: "👑";
+  position: absolute;
+  transform: rotate(-45deg);
+  font-size: 12px;
+  top: -6px;
+  left: 2px;
+}
+
+/* MENU */
 
 nav a {
-  margin: 0 15px;
+  margin: 0 20px;
   text-decoration: none;
-  color: #fff;
+  color: #aaa;
   font-weight: 600;
+  position: relative;
 }
 
-.auth a {
-  margin-left: 10px;
+nav a.active {
+  color: #ff2d7a;
+}
+
+/* linha em baixo do HOME */
+
+nav a.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #ff2d7a;
+  bottom: -5px;
+  left: 0;
+}
+
+/* AUTH */
+
+.auth {
+  display: flex;
+  align-items: center;
+}
+
+.login {
+  margin-right: 15px;
+  color: #fff;
   text-decoration: none;
+  font-weight: 600;
 }
 
 .register {
   background: #ff2d7a;
-  padding: 8px 16px;
+  padding: 8px 18px;
   border-radius: 5px;
-}
-
-/* HERO */
-
-.hero {
-  height: 100vh;
-  background: url('img/bg.jpg') center/cover;
-  display: flex;
-  align-items: center;
-  padding: 0 60px;
-  position: relative;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
-}
-
-.hero-content {
-  max-width: 600px;
-  position: relative;
-}
-
-h1 {
-  font-size: 70px;
-  font-weight: 900;
-}
-
-h1 span {
-  color: #ff2d7a;
-}
-
-p {
-  margin: 20px 0;
-  color: #ccc;
-}
-
-/* BOTÕES */
-
-.btn {
-  padding: 12px 25px;
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-right: 10px;
-}
-
-.primary {
-  background: #ff2d7a;
-}
-
-.secondary {
-  border: 1px solid #fff;
-}
-
-/* CARD */
-
-.card {
-  position: absolute;
-  right: 60px;
-  bottom: 60px;
-  width: 280px;
-  background: #111;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.card img {
-  width: 100%;
-}
-
-.card-text {
-  padding: 15px;
-}
-
-.card-text span {
-  color: #ff2d7a;
-  font-size: 12px;
+  font-weight: 700;
 }
